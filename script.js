@@ -12,7 +12,7 @@ const typedOptions = {
         "Desenvolvedor de APIs RESTful",
         "Criador de soluções personalizadas",
         "WordPress/Elementor Pro e Shopify",
-        "Apaixonado por tecnologia e inovação"
+      
     ],
     typeSpeed: 20,
     backSpeed: 45,
