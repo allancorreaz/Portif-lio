@@ -1,6 +1,7 @@
 // Ajuste a ordem ou o texto das frases animadas alterando este array.
 const typedOptions = {
     strings: [
+        "Software Developer"
         "Desenvolvedor Web",
         "Desenvolvedor Full Stack",
         "JavaScript",
