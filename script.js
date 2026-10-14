@@ -1,25 +1,28 @@
-// Ajuste a ordem ou o texto das frases animadas alterando este array.
-const typedOptions = {
-    strings: [
-        "Software Developer",
-        "Desenvolvedor Web",
-        "Desenvolvedor Full Stack",
-        "JavaScript",
-        "React.js",
-        "Node.js",
-        "Next.js",
-        "Tailwind CSS",
-        "JavaScript JSX e TypeScript JSX",
-        "PHP, Prisma, PostgreeSQL, MySQL",
-        "Desenvolvedor de APIs RESTful",
-        "Criador de soluções personalizadas",
-        "WordPress/Elementor Pro e Shopify",
-    ],
-    typeSpeed: 20,
-    backSpeed: 45,
-    backDelay: 1400,
-    startDelay: 400,
-    loop: true
-};
-
-new Typed("#typed-output", typedOptions);
+"use strict";
+// Projetos cadastrados em um único lugar. Adicione/edite itens aqui, sem duplicar HTML.
+// Previews gráficos são ILUSTRAÇÕES, não capturas reais de sistemas privados.
+const projects = [
+  {title:"Nexora AI",category:"desenvolvimento",kind:"produto",number:"01",description:"Assistente de IA em desenvolvimento, com interface de chat, conversas e histórico local. Projeto pessoal focado em ferramentas gratuitas e execução local.",stack:"Next.js · TypeScript · Tailwind CSS",github:"https://github.com/allancorreaz/Nexora-AI",symbol:"N / AI",color:"#d6e0d6",status:"Em desenvolvimento"},
+  {title:"Aprovados Questões",category:"produto",number:"02",description:"Plataforma de estudos para concursos: questões, filtros, simulados e recursos de organização dos estudos.",stack:"JavaScript · Cloudflare Workers · D1",github:"https://github.com/allancorreaz/AprovadosQuestoes",symbol:"AQ.",color:"#dee0ee",status:"Repositório"},
+  {title:"Centro de Controle da Implantação",category:"produto",number:"03",description:"Sistema para acompanhar uma implantação: atividades, evolução, pendências e visão organizada do processo.",stack:"Sistema de gestão · Dashboard",github:"https://github.com/allancorreaz/Gestao-de-Implantacao",symbol:"C / C",color:"#e4dccf",status:"Repositório"},
+  {title:"Registro Operacional",category:"produto",number:"04",description:"Registro digital de operações para reduzir anotações manuais e apoiar o acompanhamento da taxa efetiva em um processo operacional.",stack:"JavaScript · HTML · CSS",url:"https://registro-operacional.vercel.app",github:"https://github.com/allancorreaz/registro-operacional",image:"https://s.wordpress.com/mshots/v1/https%3A%2F%2Fregistro-operacional.vercel.app%2F?w=1200",status:"Projeto online"},
+  {title:"Few Barber",category:"desenvolvimento",kind:"produto",number:"05",description:"Projeto de barbearia em construção. Novas funcionalidades e interface estão sendo desenvolvidas; demonstração completa ainda não disponível.",stack:"Aplicação web · Em evolução",symbol:"FB.",color:"#d5d0c7",status:"Em desenvolvimento"},
+  {title:"Controle de Vendas e Estoque",category:"produto",number:"06",description:"Aplicação de apoio a pequenos negócios com produtos, clientes, vendas e controle de estoque.",stack:"React · Prisma · SQLite",github:"https://github.com/allancorreaz/vendas-e-estoque",symbol:"V / E",color:"#e3e0d4",status:"Repositório"},
+  {title:"Aprisco Urbano",category:"web",number:"07",description:"Experiência digital institucional para apresentar a comunidade, suas atividades e informações relevantes.",stack:"Next.js · TypeScript · Tailwind",url:"https://apriscourbano.vercel.app",github:"https://github.com/allancorreaz/apriscourbano",image:"https://s.wordpress.com/mshots/v1/https%3A%2F%2Fapriscourbano.vercel.app%2F?w=1200",status:"Site"},
+  {title:"Neuraw",category:"web",number:"08",description:"Loja online de suplementos naturais, com foco na organização da vitrine digital e na experiência de navegação.",stack:"Shopify · Liquid · JavaScript",url:"https://www.neuraw.com.br",image:"https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.neuraw.com.br%2F?w=1200",status:"E-commerce"},
+  {title:"Florida Pool Plastering",category:"web",number:"09",description:"Presença institucional para empresa de revestimento e renovação de piscinas, voltada ao público da Flórida.",stack:"Web · Responsividade",url:"https://www.floridapoolplastering.com",image:"https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.floridapoolplastering.com%2F?w=1200",status:"Site"},
+  {title:"Pool Builders B2B",category:"web",number:"10",description:"Landing page para apresentar parcerias B2B entre a Florida Pool Plastering e profissionais do setor.",stack:"WordPress · Elementor Pro",url:"https://www.floridapoolplastering.com/builder/",image:"https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.floridapoolplastering.com%2Fbuilder%2F?w=1200",status:"Landing page"},
+  {title:"Ocean Pools FL",category:"web",number:"11",description:"Site corporativo para serviços de construção e remodelação de piscinas, com comunicação voltada ao cliente final.",stack:"HTML · CSS · JavaScript",url:"https://www.oceanpoolsfl.com",image:"https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.oceanpoolsfl.com%2F?w=1200",status:"Site"},
+  {title:"Casa Sol Project",category:"web",number:"12",description:"Site institucional de projetos e renovação de áreas externas com foco em apresentação de serviços.",stack:"HTML · CSS · JavaScript",url:"https://www.casasolproject.com",image:"https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.casasolproject.com%2F?w=1200",status:"Site"},
+  {title:"Sants Company",category:"web",number:"13",description:"Site de agência de marketing e desenvolvimento com apresentação de serviços e captação de contatos.",stack:"HTML · CSS · JavaScript · PHP",url:"https://www.santscompany.com",github:"https://github.com/allancorreaz/santscompany",image:"https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.santscompany.com%2F?w=1200",status:"Site"}
+];
+const grid=document.getElementById("projects-grid");
+const count=document.getElementById("project-count");
+const safe=(value)=>String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function graphic(p){return '<div class="project-visual project-visual--graphic" style="--preview:'+safe(p.color||"#d8dfd1")+'"><div class="graphic-top"><span>'+safe(p.title)+'</span><span>AC / '+safe(p.number)+'</span></div><div class="graphic-symbol" aria-hidden="true">'+safe(p.symbol||"AC")+'</div><span class="graphic-bottom">Ilustração conceitual · Projeto digital</span><span class="project-overlay">'+safe(p.status)+'</span></div>'}
+function visual(p){if(!p.image)return graphic(p);return '<div class="project-visual"><img src="'+safe(p.image)+'" alt="Prévia pública do site '+safe(p.title)+'" loading="lazy" decoding="async" referrerpolicy="no-referrer" /><span class="project-overlay">'+safe(p.status)+'</span></div>'}
+function actions(p){const result=[];if(p.url)result.push('<a href="'+safe(p.url)+'" target="_blank" rel="noopener noreferrer">Ver projeto ↗</a>');if(p.github)result.push('<a href="'+safe(p.github)+'" target="_blank" rel="noopener noreferrer">Código no GitHub ↗</a>');return result.join("")}
+function render(filter="todos"){if(!grid)return;const shown=projects.filter(p=>filter==="todos"||p.category===filter||filter==="produto"&&p.kind==="produto");grid.innerHTML=shown.map(p=>'<article class="project-card">'+visual(p)+'<div class="project-info"><div class="project-meta"><span>'+safe(p.number)+' / '+safe(p.category==="web"?"Web & comércio":"Produto & software")+'</span><span>'+safe(p.status)+'</span></div><h3>'+safe(p.title)+'</h3><p>'+safe(p.description)+'</p><div class="project-stack">'+safe(p.stack)+'</div><div class="project-actions">'+actions(p)+'</div></div></article>').join("");if(count)count.textContent=projects.length}
+document.querySelectorAll(".filter").forEach(button=>button.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(b=>{b.classList.remove("is-active");b.setAttribute("aria-pressed","false")});button.classList.add("is-active");button.setAttribute("aria-pressed","true");render(button.dataset.filter)}));
+const toggle=document.getElementById("menu-toggle"),nav=document.getElementById("main-nav");if(toggle&&nav){toggle.addEventListener("click",()=>{const open=nav.classList.toggle("is-open");toggle.setAttribute("aria-expanded",String(open));toggle.setAttribute("aria-label",open?"Fechar menu":"Abrir menu")});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("is-open");toggle.setAttribute("aria-expanded","false")}))}
+const year=document.getElementById("year");if(year)year.textContent=new Date().getFullYear();render();

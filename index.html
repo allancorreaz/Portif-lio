@@ -1,422 +1,83 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allan de Melo Correa | Desenvolvedor FullStack</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f6f2" />
+  <meta name="description" content="Allan de Melo Correa — desenvolvedor fullstack. Projetos de software, aplicações web, integrações, automação e dados." />
+  <meta property="og:title" content="Allan Correa — Desenvolvimento & Software" />
+  <meta property="og:description" content="Projetos reais, interfaces e soluções de software." />
+  <title>Allan Correa — Desenvolvedor Fullstack</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23252b24'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='bold' text-anchor='middle' font-size='31' fill='%23f7f6f2'%3EAC%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
-
 <body>
-
-    <header>
-        <div class="container header-inner">
-            <a href="#hero" class="logo">Allan De Melo Correa</a>
-            <nav>
-                <a href="#sobre">Sobre</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#habilidades">Habilidades</a>
-                <a href="#contato">Contato</a>
-            </nav>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="wrap nav-shell">
+      <a class="wordmark" href="#inicio" aria-label="Allan Correa, início">allan<span class="mark-dot">.</span>correa</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+        <a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#experiencia">Experiência</a><a href="#contato" class="nav-contact">Contato <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-meta"><span class="eyebrow"><span class="status-dot"></span> Desenvolvimento de software & experiências digitais</span><span class="hero-index">PORTFÓLIO / 2026</span></div>
+      <div class="hero-grid">
+        <div class="hero-main">
+          <p class="hello">Olá, eu sou o Allan.</p>
+          <h1 id="hero-title">Transformo desafios em <em>software</em> que funciona.</h1>
+          <p class="hero-description">Desenvolvedor fullstack com atuação em aplicações web, sistemas corporativos, integrações e dados. Gosto de entender o problema antes de escrever a primeira linha de código.</p>
+          <div class="hero-buttons"><a class="button button-dark" href="#projetos">Explorar meu trabalho <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#contato">Vamos conversar <span aria-hidden="true">→</span></a></div>
         </div>
-    </header>
+        <aside class="hero-aside" aria-label="Perfil profissional">
+          <div class="portrait-frame"><img src="avatar-github.png" alt="Foto de Allan de Melo Correa" width="280" height="280" decoding="async" /><span class="portrait-stamp">A / C</span></div>
+          <div class="aside-line"><span>BASE</span><strong>Rio de Janeiro, Brasil</strong></div>
+          <div class="aside-line"><span>ATUAÇÃO</span><strong>Fullstack · Sistemas · Dados</strong></div>
+          <a class="social-plain" href="https://github.com/allancorreaz" target="_blank" rel="noopener noreferrer">Conheça meu GitHub ↗</a>
+        </aside>
+      </div>
+      <div class="hero-bottom"><span>PROJETOS AUTORAIS & SOLUÇÕES REAIS</span><a href="#projetos" aria-label="Rolar para projetos">DESCUBRA <span aria-hidden="true">↓</span></a></div>
+    </section>
 
-    <main>
-        <!-- HERO -->
-        <section id="hero">
-            <div class="section-wrapper hero-wrapper">
-                <div class="hero-copy">
-                    <span class="hero-eyebrow">Portifólio de Projetos</span>
-                    <h3>Software Developer</h3>
-                    <!-- Atualize as frases animadas em script.js (typedOptions.strings) -->
-                    <p class="hero-highlight"><span id="typed-output"></span></p>
-                    <p>Desenvolvedor web, formado em Análise e Desenvolvimento de Sistemas, com experiencia em Full-Stack. Contarei mais sobre mim abaixo.</p>
-                    <div class="hero-actions">
-                        <a href="#projetos" class="btn primary">Ver projetos em destaque</a>
-                        <a href="#contato" class="btn ghost">Vamos conversar</a>
-                    </div>
-                    <ul class="hero-stats">
-                        <li><strong>Arquiteturas sob medida</strong> Python, Django, JavaScript, Node.js, React.js, Tailwind CSS, Bootstrap, Wordpress/Elementor Pro, Shopify e stacks customizadas</li>
-                        <li><strong>Performance e SEO</strong> Boas práticas Core Web Vitals em cada entrega</li>
-                        <li><strong>Experiência completa</strong> Do discovery ao lançamento e manutenção</li>
-                    </ul>
-                </div>
-                <aside class="hero-media">
-                    <img src="avatar-github.png" alt="Foto de Allan de Melo Correa" class="hero-avatar">
-                    <span class="hero-badge">Disponível para freelancers e propostas de emprego. </span>
-                 
-                </aside>
-            </div>
-        </section>
-
-        <!-- SOBRE -->
-        <section id="sobre">
-            <div class="section-wrapper">
-                <h3 class="section-title">Sobre Mim</h3>
-                <p>Sou Allan de Melo Correa, tenho 25 anos, formado em <strong>Análise e Desenvolvimento de Sistemas pela Universidade Estácio</strong>, estudando inglês e estudante ativo da <strong>DIO.me e Udemy</strong>, onde aprofundo continuamente minhas habilidades técnicas, boas práticas de engenharia e fundamentos de desenvolvimento moderno.</p>
-                <p>Atuo como <strong>desenvolvedor fullstack</strong>, criando soluções digitais rápidas, estáveis e alinhadas às necessidades de negócios. Transformo estratégias e identidades visuais em experiências consistentes, escaláveis e otimizadas para performance, SEO e conversão.</p>
-
-                <p>Minha rotina envolve desenvolvimento e personalização de websites utilizando, além de stacks modernas. Trabalho criando componentes reutilizáveis, resolvendo problemas de arquitetura visual, implementando animações fluidas e cuidando da qualidade do código para garantir manutenção simples e evolução contínua.</p>
-
-                <p>Tenho como foco unir desempenho, identidade visual e boas práticas, trazendo clareza, precisão e comunicação transparente em cada projeto. Busco sempre entregar interfaces que representam a marca, criam confiança e oferecem uma experiência digital de verdade.</p>
-
-<p>
-    <strong>Stacks e tecnologias que estou estudando e aprendendo na prática. Outras já tenho experiência, conforme mostro nos projetos abaixo:</strong><br>
-    - JavaScript, TypeScript <br>
-    - Node.js, React.js <br>
-    - Python, Django <br>
-    - MySQL, SQLServer <br>
-    - Shopify, Liquid, WordPress, Elementor Pro <br>
-    - Git/GitHub, SEO Técnico, Core Web Vitals, responsividade moderna, acessibilidade<br>
-    - Otimização de imagens, microinterações e animações<br>
-    - Conceitos básicas e fundamentos de React
-</p>
-
-            </div>
-        </section>
-
-        <!-- PROJETOS -->
-        <section id="projetos">
-            <div class="section-wrapper">
-                <h3 class="section-title">Projetos em Destaque</h3>
-                <div class="projects-grid">
-
-
-
-                      <article class="project-card">
-                        <figure class="project-thumb">
-                            <img src="https://s.wordpress.com/mshots/v1/https://www.neuraw.com.br?w=1200" alt="Preview do projeto NEURAW - BR">
-                        </figure>
-                        <div class="project-body">
-                            <div class="project-tags">
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">.Liquid</span>
-                                <span class="project-tag">100% Responsivo</span>
-                                <span class="project-tag">Shopify CLI</span>
-                            </div>
-                            <h4>NEURAW - BR</h4>
-                            <p>O Neuraw é um e-commerce brasileiro de suplementos naturais voltado para performance mental e física, focando em clareza de pensamento, energia, foco, bem-estar e equilíbrio emocional. 
-                            O site apresenta uma vitrine de produtos funcionais baseados em extratos naturais como Juba de Leão (Lion’s Mane), Reishi e Cordyceps, conhecidos por seus potenciais benefícios para foco, memória, disposição e redução de estresse — tudo sem estimulantes artificiais.</p>
-                            <a class="project-link" href="https://www.neuraw.com.br" target="_blank" rel="noopener noreferrer"><span>Visitar projeto -></span></a>
-                        </div>
-                    </article>
-                   
-                     <article class="project-card">
-                        <figure class="project-thumb">
-                            <img src="https://s.wordpress.com/mshots/v1/https://www.floridapoolplastering.com/builder?w=1200" alt="Preview do projeto LP B2B Flórida Plastering - BR">
-                        </figure>
-                        <div class="project-body">
-                            <div class="project-tags">
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">100% Responsivo</span>
-                                <span class="project-tag">Stacks costumizadas</span>
-                                <span class ="project-tag">Wordpress & Elementor Pro</span> 
-            
-            
-
-
-                               
-                            </div>
-                            <h4>B2B - Pool Builders</h4>
-                            <p></p> Pool Builders é uma página focada em parcerias B2B (business-to-business), direcionada especialmente para construtores e empreiteiras de piscinas no sudeste da Flórida. 
-                                Ela apresenta a Florida Pool Plastering como um parceiro confiável e certificado para aplicação de acabamentos internos de alta qualidade em piscinas, com destaque para ser um aplicador oficial PebbleTec® e ter equipe própria 100% interna.
-                                A página descreve as vantagens competitivas para o público profissional — como processo eficiente, cronograma previsível e consistência na execução das aplicações — e inclui um formulário para solicitar orçamento ou parceria de construção..</p>
-                            <a class="project-link" href="https://www.floridapoolplastering.com/builder/" target="_blank" rel="noopener noreferrer"><span>Visitar projeto -></span></a>
-                        </div>
-                    </article>
-
-
-                     <article class="project-card">
-                        <figure class="project-thumb">
-                            <img src="https://s.wordpress.com/mshots/v1/https://www.floridapoolplastering.com?w=1200" alt="Preview do projeto Florida Pool Plastering">
-                        </figure>
-                        <div class="project-body">
-                            <div class="project-tags">
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">100% Responsivo</span>
-                                <span class="project-tag">Stacks costumizadas</span>
-                                
-                            </div>
-                            <h4>Florida Pool Plastering</h4>
-                            <p>Florida Pool Plastering é um site institucional americano para uma empresa especializada em acabamentos e remodelação de piscinas no estilo de negócios de empresas de “pool plastering” (aplicação de reboco e revestimentos em piscinas) tipicamente encontradas na Flórida, EUA. O site funciona como vitrine digital da marca e permite ao visitante entender rapidamente os serviços oferecidos e a proposta de valor da empresa.</p>
-                            <a class="project-link" href="https://www.floridapoolplastering.com" target="_blank" rel="noopener noreferrer"><span>Visitar projeto -></span></a>
-                        </div>
-                    </article>
-                    
-                    <!-- <article class="project-card">
-                        <figure class="project-thumb">
-                            <img src="https://s.wordpress.com/mshots/v1/https://apriscourbano.vercel.app/?w=1200" alt="Preview do projeto Aprisco Urbano">
-                        </figure>
-                        <div class="project-body">
-                            <div class="project-tags">
-                                <span class="project-tag">TypeScript JSX</span>
-                                <span class="project-tag">Tailwind CSS</span>
-                                <span class="project-tag">Next.js</span>
-                                <span class="project-tag">PostgreSQL</span>
-                                <span class="project-tag">Prisma</span><br>
-                                <span class="project-tag"><strong>Em desenvolvimento</strong></span>
-                                
-                            </div>
-                            <h4>Igreja Evangélica Aprisco Urbano</h4>
-                            <p>Site institucional para Igreja Aprisco Urbano, com todas as informações sobre eventos, liderança, culto, pastores.</p>
-                            <a class="project-link" href="https://apriscourbano.vercel.app" target="_blank" rel="noopener noreferrer"><span>Visitar projeto -></span></a>
-                        </div>
-                    </article> -->
-
-                    <article class="project-card">
-                        <figure class="project-thumb">
-                            <img src="https://s.wordpress.com/mshots/v1/https://www.santscompany.com/?w=1200" alt="Preview do Sants Company">
-                        </figure>
-                        <div class="project-body">
-                            <div class="project-tags">
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">HTML</span>
-                                 <span class="project-tag">PHP</span>
-                            </div>
-                            <h4>Sants Company</h4>
-                            <p>Site institucional para agência de marketing e desenvolvimento web, focado em conseguir leads e mostrar para os clientes sobre a credibilidade e potencial da empresa.</p>
-                            <a class="project-link" href="https://www.santscompany.com" target="_blank" rel="noopener noreferrer"><span>Visitar projeto -></span></a>
-                        </div>
-                    </article>
-                    
-                    
-                  
-                    <article class="project-card">
-                        <figure class="project-thumb">
-                            <img src="https://s.wordpress.com/mshots/v1/https://www.oceanpoolsfl.com?w=1200" alt="Preview do projeto Ocean Pools FL">
-                        </figure>
-                        <div class="project-body">
-                            <div class="project-tags">
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">100% Responsivo</span>
-                                <span class="project-tag">Stacks costumizadas</span>
-                            </div>
-                            <h4>Ocean Pools FL</h4>
-                            <p>O Ocean Pools é um site corporativo de uma empresa de construção e remodelação de piscinas com sede em Delray Beach, Flórida (EUA), especializado em transformar espaços externos em ambientes de lazer personalizados e de alto padrão.</p>
-                            <a class="project-link" href="https://www.oceanpoolsfl.com" target="_blank" rel="noopener noreferrer"><span>Visitar projeto -></span></a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <figure class="project-thumb">
-                            <img src="https://s.wordpress.com/mshots/v1/https://www.casasolproject.com?w=1200" alt="Preview do projeto Casa Sol Project">
-                        </figure>
-                        <div class="project-body">
-                            <div class="project-tags">
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">100% Responsivo</span>
-                                <span class="project-tag">Stacks costumizadas</span><br>
-                                    <!--
-                                <span class="project-tag">Ainda em desenvolvimento</span> -->
-                            </div>
-                            <h4>Casa Sol Project</h4>
-                            <p>O Casa Sol Project é um site americano corporativo voltado à apresentação de uma empresa especializada em projetos externos personalizados, com foco em construção e renovação de piscinas e espaços ao ar livre. Ele serve como uma vitrine digital moderna para os serviços oferecidos, destacando experiência, qualidade de execução e atendimento consultivo ao cliente.</p>
-                            <a class="project-link" href="https://www.casasolproject.com" target="_blank" rel="noopener noreferrer"><span>Visitar projeto -></span></a>
-                        </div>
-                    </article>
-                    
-                                         
-                    <article class="project-card">
-                        <figure class="project-thumb">
-                            <img src="https://s.wordpress.com/mshots/v1/https://registro-operacional.vercel.app/?w=1200" alt="Preview do projeto Registro Operacional">
-                        </figure>
-                        <div class="project-body">
-                            <div class="project-tags">
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">HTML</span>
-                            </div>
-                            <h4>Taxa Efetiva - Operação</h4>
-                            <p>O registro operacional é usado na operação de Virador de Vagões - inicialmente usado na CSN, pela operação do virador. É usado para ter a taxa efetiva, é um meio de reduzir o tempo perdido escrevendo e acelerar o processo com esse registro online. Ele veio para acelerar e facilitar o processo para operadores..</p>
-                            <a class="project-link" href="https://registro-operacional.vercel.app" target="_blank" rel="noopener noreferrer"><span>Visitar projeto -></span></a>
-                        </div>
-                    </article>
-
-
-                   <article class="project-card">
-                       <figure class="project-thumb">
-                           <img
-                               src="https://opengraph.githubassets.com/1/allancorreaz/AprovadosQuestoes"
-                                   alt="Prévia do repositório Aprovados Questões"
-                                   loading="lazy"
-                               >
-                       </figure>
-                     <div class="project-body">
-                        <div class="project-tags">
-                          <span class="project-tag">JavaScript</span>
-                          <span class="project-tag">HTML</span>
-                          <span class="project-tag">CSS</span>
-                          <span class="project-tag">Cloudflare Workers</span>
-                          <span class="project-tag">Cloudflare D1</span>
-                    </div>
-                        <h4>Aprovados Questões</h4>
-                         <p>Plataforma de estudos para concursos com filtros por banca, disciplina e assunto, simulados e cronômetro com restauração. Inclui autenticação, painel administrativo básico e biblioteca de materiais públicos, com uma API integrada ao banco de dados Cloudflare D1.</p>
-                         <a class="project-link" href="https://github.com/allancorreaz/AprovadosQuestoes" target="_blank" rel="noopener noreferrer">
-                        <span>Ver repositório →</span>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <figure class="project-thumb">
-                           <img
-                               src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fapriscourbano.vercel.app%2F?w=1200"
-                                   alt="Prévia do site Aprisco Urbano"
-                                   loading="lazy"
-                               >
-                       </figure>
-                    <div class="project-body">
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Next.js</span>
-                            <span class="project-tag">TypeScript</span>
-                            <span class="project-tag">Drizzle ORM</span>
-                            <span class="project-tag">Cloudflare D1</span>
-                        </div>
-                        <h4>Aprisco Urbano</h4>
-                        <p>Site institucional com páginas de ministérios, células e eventos, integrado a uma área administrativa. O projeto reúne gerenciamento de conteúdo, usuários e permissões, além de registros de auditoria das ações administrativas.</p>
-                        <a class="project-link" href="https://apriscourbano.vercel.app" target="_blank" rel="noopener noreferrer">
-                            <span>Visitar projeto →</span>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <figure class="project-thumb">
-                           <img
-                               src="https://opengraph.githubassets.com/1/allancorreaz/Gestao-de-Implantacao"
-                                   alt="Prévia do repositório Centro de Controle da Implantação"
-                                   loading="lazy"
-                               >
-                       </figure>
-                    <div class="project-body">
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">FastAPI</span>
-                            <span class="project-tag">SQLAlchemy</span>
-                            <span class="project-tag">SQL Server</span>
-                            <span class="project-tag">Jinja2</span>
-                        </div>
-                        <h4>Centro de Controle da Implantação</h4>
-                        <p>Aplicação para acompanhar a implantação de sistemas empresariais, centralizando etapas, tarefas, tickets, pendências e decisões. Inclui importação de históricos, controle de acesso, auditoria, anexos e exportação de relatórios em Excel.</p>
-                        <a class="project-link" href="https://github.com/allancorreaz/Gestao-de-Implantacao" target="_blank" rel="noopener noreferrer">
-                            <span>Ver repositório →</span>
-                        </a>
-                    </div>
-                </article>
-                
-                <article class="project-card">
-                    <figure class="project-thumb">
-                           <img
-                               src="https://opengraph.githubassets.com/1/allancorreaz/barbershop-management-system"
-                                   alt="Prévia do repositório Sistema de Gestão de Barbearia"
-                                   loading="lazy"
-                               >
-                       </figure>
-                    <div class="project-body">
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Django</span>
-                            <span class="project-tag">SQLite</span>
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                        </div>
-                        <h4>Sistema de Gestão de Barbearia</h4>
-                        <p>Aplicação web para organizar clientes, serviços, atendimentos, estoque e movimentações de caixa. Reúne histórico de clientes, indicadores de gestão, alertas de reposição e autenticação para acesso às funcionalidades.</p>
-                        <a class="project-link" href="https://github.com/allancorreaz/barbershop-management-system" target="_blank" rel="noopener noreferrer">
-                            <span>Ver repositório →</span>
-                        </a>
-                    </div>
-                </article>
-                
-                <article class="project-card">
-                    <figure class="project-thumb">
-                           <img
-                               src="https://opengraph.githubassets.com/1/allancorreaz/vendas-e-estoque"
-                                   alt="Prévia do repositório Controle de Vendas e Estoque"
-                                   loading="lazy"
-                               >
-                       </figure>
-                    <div class="project-body">
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Next.js</span>
-                            <span class="project-tag">TypeScript</span>
-                            <span class="project-tag">Prisma</span>
-                            <span class="project-tag">SQLite</span>
-                        </div>
-                        <h4>Controle de Vendas e Estoque</h4>
-                        <p>Aplicação para pequenos comércios com cadastro de clientes e produtos, registro de vendas e atualização de estoque. O projeto utiliza componentes React, rotas de API e persistência de dados com Prisma, além de páginas de dashboard e relatórios.</p>
-                        <a class="project-link" href="https://github.com/allancorreaz/vendas-e-estoque" target="_blank" rel="noopener noreferrer">
-                            <span>Ver repositório →</span>
-                        </a>
-                    </div>
-                </article>
-
-                    
-                    
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- HABILIDADES -->
-        <section id="habilidades">
-            <div class="section-wrapper">
-                <h3 class="section-title">Tecnologias e Processos</h3>
-                <div class="skills">
-                    <span class="skill">FullStack</span>
-                    <span class="skill">HTML & CSS</span>
-                     <span class="skill">Tailwind e Bootstrap</span>
-                    <span class="skill">JavaScript e TypeScript</span>
-                    <span class="skill">React.js, Next.js & Node.js</span>
-                     <span class="skill">JavaScript JSX e Typescript JSX</span>
-                     <span class="skill">PHP</span>
-                     <span class="skill">Python e Django</span>
-                     <span class="skill">MySQL, SQLServer, Prisma</span>
-                    <span class="skill">Shopify & Liquid</span>
-                    <span class="skill">WordPress & Elementor Pro</span>
-                    <span class="skill">Versionamento com Git</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTATO -->
-        <section id="contato">
-            <div class="section-wrapper">
-                <h3 class="section-title">Vamos Criar Algo Juntos?</h3>
-                <p>Conte um pouco sobre o seu projeto, desafio ou produto. Responderei com um plano claro, estimativa de escopo e próximos passos para tirarmos a ideia do papel.</p>
-                <div class="contact-actions">
-                    <a class="contact-link" href="mailto:allan.correa@bytrez.com">Enviar e-mail</a>
-                    <a class="contact-link" href="https://t.me/allancorreaz" target="_blank" rel="noopener noreferrer">Telegram</a>
-                    <a class="contact-link" href="https://linkedin.com/in/allandemelocorrea" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a class="contact-link" href="https://github.com/allancorreaz" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a class="contact-link" href="https://discord.com/channels/@me/1260384369978114051" target="_blank" rel="noopener noreferrer">Discord</a>
-                    <a class="contact-link" href="https://wa.me/5521979075762" target="_blank" rel="noopener noreferrer">Whatsapp</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container footer-wrapper">
-            <p class="footer-meta">© 2025 — Portfólio de Allan de Melo Correa. Todos os direitos reservados.</p>
+    <section id="projetos" class="section work-section" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="section-heading"><div><span class="eyebrow">01 / TRABALHOS SELECIONADOS</span><h2 id="projects-title">Projetos que <em>contam histórias.</em></h2></div><p>Uma seleção de produtos, sistemas e experiências digitais. Cada projeto traz desafios diferentes — e uma solução pensada para eles.</p></div>
+        <div class="filters" role="group" aria-label="Filtrar projetos">
+          <button type="button" class="filter is-active" data-filter="todos" aria-pressed="true">Todos <span id="project-count"></span></button>
+          <button type="button" class="filter" data-filter="produto" aria-pressed="false">Produtos & sistemas</button>
+          <button type="button" class="filter" data-filter="web" aria-pressed="false">Web & comércio</button>
+          <button type="button" class="filter" data-filter="desenvolvimento" aria-pressed="false">Em desenvolvimento</button>
         </div>
-    </footer>
+        <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
+        <p class="project-footnote">Prévias de sites públicos podem depender da disponibilidade de serviços externos. Projetos sem captura pública utilizam composições gráficas identificadas como ilustrações.</p>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="sobre" class="section about-section" aria-labelledby="about-title"><div class="wrap about-grid">
+      <div><span class="eyebrow">02 / QUEM SOU</span><h2 id="about-title">Código é ferramenta.<br /><em>Resolver é o trabalho.</em></h2></div>
+      <div class="about-copy"><p>Sou Allan de Melo Correa, formado em Análise e Desenvolvimento de Sistemas pela Estácio. Trabalho com desenvolvimento de software e com problemas reais de operação: entender processos, investigar dados, integrar sistemas e tornar rotinas mais eficientes.</p><p>Gosto tanto de criar uma interface bem resolvida quanto de descobrir por que uma consulta SQL, uma regra de negócio ou uma integração não está funcionando como deveria.</p><p>Este portfólio reúne projetos pessoais e entregas web. Os sistemas corporativos aparecem aqui apenas em nível descritivo, sem expor informações internas.</p><a href="https://linkedin.com/in/allandemelocorrea" target="_blank" rel="noopener noreferrer" class="text-link">Minha trajetória no LinkedIn ↗</a></div>
+    </div></section>
+
+    <section id="experiencia" class="section expertise-section" aria-labelledby="expertise-title"><div class="wrap">
+      <div class="section-heading"><div><span class="eyebrow">03 / COMO TRABALHO</span><h2 id="expertise-title">Do problema ao <em>produto.</em></h2></div><p>Meu foco é construir soluções úteis, fáceis de evoluir e que façam sentido para quem vai utilizá-las.</p></div>
+      <div class="expertise-grid">
+        <article><span class="expertise-number">01</span><h3>Interfaces & produtos web</h3><p>Experiências responsivas, acessíveis e feitas para pessoas reais — não apenas para impressionar em screenshots.</p><div class="techline">HTML · CSS · JavaScript · React · Next.js · Tailwind</div></article>
+        <article><span class="expertise-number">02</span><h3>Back-end & dados</h3><p>APIs, modelagem, persistência, consultas e entendimento das regras que sustentam um sistema.</p><div class="techline">Node.js · Python · SQL Server · PostgreSQL · MySQL</div></article>
+        <article><span class="expertise-number">03</span><h3>Sistemas & integrações</h3><p>Investigação técnica, automação de fluxos e integração entre software e processos de negócio.</p><div class="techline">APIs REST · Git · Docker · ERP · Automação</div></article>
+      </div>
+    </div></section>
+
+    <section class="statement-section"><div class="wrap"><span class="eyebrow">MEU JEITO DE CONSTRUIR</span><p>Menos efeito por efeito.<br /><em>Mais intenção em cada detalhe.</em></p></div></section>
+
+    <section id="contato" class="section contact-section"><div class="wrap contact-grid"><div><span class="eyebrow">04 / PRÓXIMA CONVERSA</span><h2>Tem uma ideia ou <em>um desafio?</em></h2><p>Seja uma oportunidade profissional, um produto ou um problema técnico interessante, será um prazer conversar.</p><a href="mailto:allan.correa@bytrez.com" class="contact-email">allan.correa@bytrez.com <span aria-hidden="true">↗</span></a></div><div class="contact-links"><a href="https://github.com/allancorreaz" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="https://linkedin.com/in/allandemelocorrea" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a><a href="https://wa.me/5521979075762" target="_blank" rel="noopener noreferrer">WhatsApp <span>↗</span></a><a href="https://t.me/allancorreaz" target="_blank" rel="noopener noreferrer">Telegram <span>↗</span></a></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© <span id="year">2026</span> Allan de Melo Correa</span><span>Feito com atenção aos detalhes.</span><a href="#inicio">Voltar ao topo ↑</a></div></footer>
 </body>
 </html>
