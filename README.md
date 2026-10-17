@@ -28,7 +28,7 @@ A Vercel utiliza `npm run build` e publica a pasta `dist`, conforme `vercel.json
 - `src/components/ui/`: componentes no padrão shadcn/ui com Radix e CVA.
 - `public/previews/`: capturas dos sites utilizadas nos cards.
 
-Os cards exibem até três linhas de descrição. O conteúdo completo pode ser consultado na janela de detalhes. Projetos sem prévia utilizam o logo do GitHub. O portfólio utiliza tema escuro fixo, com destaques vermelhos e detalhes verdes.
+Os cards exibem até três linhas de descrição. O conteúdo completo pode ser consultado na janela de detalhes. Projetos sem prévia utilizam o logo do GitHub. O portfólio utiliza tema escuro fixo, com destaques em cinza e detalhes verdes.
 
 ## Tecnologias
 
