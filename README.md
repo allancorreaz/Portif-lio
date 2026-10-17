@@ -26,9 +26,9 @@ A Vercel utiliza `npm run build` e publica a pasta `dist`, conforme `vercel.json
 - `src/App.tsx`: apresentação, navegação e seções.
 - `src/styles.css`: identidade visual e regras responsivas.
 - `src/components/ui/`: componentes no padrão shadcn/ui com Radix e CVA.
-- `public/avatar-github.png`: avatar utilizado na apresentação e como alternativa às prévias.
+- `public/previews/`: capturas dos sites utilizadas nos cards.
 
-Os cards exibem até três linhas de descrição. O conteúdo completo pode ser consultado na janela de detalhes. Prévias indisponíveis são substituídas pelo avatar.
+Os cards exibem até três linhas de descrição. O conteúdo completo pode ser consultado na janela de detalhes. Projetos sem prévia utilizam o logo do GitHub. O tema acompanha o dispositivo por padrão; o seletor alterna entre automático, claro e escuro.
 
 ## Tecnologias
 
